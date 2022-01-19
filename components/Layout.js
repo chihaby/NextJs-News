@@ -1,16 +1,16 @@
-import Nav from './Nav';
+import Navbar from './Navbar';
 import Meta from './Meta';
-import Header from './Header';
+import Hero from './Hero';
 import styles from '../styles/Layout.module.css';
 
 const Layout = ({ children }) => {
   return (
     <>
       <Meta />
-      <Nav />
+      <Navbar />
       <div className={styles.container}>
         <main className={styles.main}>
-          <Header />
+          <Hero />
           {children}
         </main>
       </div>

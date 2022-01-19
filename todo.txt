@@ -1,0 +1,1 @@
+fix fa-times and fa-bars classNames to trigger css
