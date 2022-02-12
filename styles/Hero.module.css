@@ -1,4 +1,4 @@
-.title a,
+/* .title a,
 .title span {
   color: #0070f3;
   text-decoration: none;
@@ -24,4 +24,15 @@
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
+} */
+
+.image_hero {
+  width: 60%;
+  float: right;
+}
+
+@media screen and (max-width: 960px) {
+  .image_hero {
+    width: 100%;
+  }
 }
