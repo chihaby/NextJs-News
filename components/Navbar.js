@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className={navbarStyles.navbarItems}>
       <h1 className={navbarStyles.navbar_logo}>
-        Website Figure<i className='fab fa-react'></i>
+        <i className='fa fa-globe'> Website Figure</i>
       </h1>
       <div className={navbarStyles.menu_icon} onClick={handleClick}>
         <i className={toggle ? 'fas fa-times' : 'fas fa-bars'}></i>
@@ -20,26 +20,26 @@ const Navbar = () => {
       <ul
         className={
           toggle
-            ? `${navbarStyles.nav_menu} ${navbarStyles.active}`
+            ? `${navbarStyles.nav_menu} ${navbarStyles.nav_active}`
             : `${navbarStyles.nav_menu}`
         }
       >
         <li className={navbarStyles.nav_links}>
           <Link href='/'>
-            <a>Home</a>
+            <a onClick={handleClick}>Home</a>
           </Link>
         </li>
         <li className={navbarStyles.nav_links}>
           <Link href='/about'>
-            <a>About Us</a>
+            <a onClick={handleClick}>About</a>
           </Link>
         </li>
         <li className={navbarStyles.nav_links}>
-          <Link href='/pricing'>
-            <a>Blog Post</a>
+          <Link href='/articles'>
+            <a onClick={handleClick}>Articles</a>
           </Link>
         </li>
-        <Button>Contact</Button>
+        <Button onClick={handleClick}>Contact Us</Button>
       </ul>
     </nav>
   );

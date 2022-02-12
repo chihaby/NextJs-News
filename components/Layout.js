@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
 import Meta from './Meta';
-import Hero from './Hero';
+// import Hero from './Hero';
 import styles from '../styles/Layout.module.css';
 
 const Layout = ({ children }) => {
@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       <Navbar />
       <div className={styles.container}>
         <main className={styles.main}>
-          <Hero />
+          {/* <Hero /> */}
           {children}
         </main>
       </div>

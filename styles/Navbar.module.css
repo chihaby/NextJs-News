@@ -1,5 +1,14 @@
+.navbar {
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
 .navbarItems {
-  background-color: bisque;
+  background-color: #fff;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -8,7 +17,7 @@
 }
 
 .navbar_logo {
-  color: brown;
+  color: rgb(0, 153, 255);
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -17,7 +26,7 @@
 .nav_menu {
   display: grid;
   grid-template-columns: repeat(5, auto);
-  gap: 10px;
+  grid-gap: 10px;
   list-style: none;
   text-align: center;
   width: 70vw;
@@ -32,8 +41,8 @@
 }
 
 .nav_links :hover {
-  background-color: rgb(114, 28, 28);
-  border-radius: 4px;
+  /* background-color: rgb(0, 153, 255);
+  border-radius: 4px; */
   transition: all 0.2s ease-out;
 }
 
@@ -58,17 +67,18 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 500px;
+    height: 40vh;
     position: absolute;
     top: 80px;
-    left: 0;
+    left: -100%;
     opacity: 1;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
   }
 
-  .nav_menu.active {
-    background: rgb(233, 235, 135);
+  .nav_active {
+    background: #004d80;
     left: 0;
+    bottom: -20px;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
@@ -76,14 +86,10 @@
 
   .nav_links {
     text-align: center;
+    color: whitesmoke;
     padding: 2rem;
     width: 100%;
     display: table;
-  }
-
-  .nav_links :hover {
-    background-color: rgba(206, 49, 49, 0.333);
-    border-radius: 0;
   }
 
   .navbar_logo {
@@ -98,7 +104,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    transition: translate(-100%, 60%);
+    transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
   }
@@ -115,15 +121,15 @@
     margin: 2rem auto;
     border-radius: 4px;
     width: 80%;
-    background: rgb(129, 190, 67);
+    background: #1888ff;
     text-decoration: none;
-    color: whitesmoke;
+    color: #fff;
     font-size: 1.5rem;
   }
 
   .nav_links_mobile:hover {
     background: #fff;
-    color: blueviolet;
+    color: #1888ff;
     transition: 250ms;
   }
 }

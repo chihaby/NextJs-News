@@ -1,7 +1,7 @@
 import btnStyles from '../styles/Button.module.css';
 
-const STYLES = ['btn-primary', 'btn-outline'];
-const SIZES = ['btn_medium', 'btn_large'];
+const STYLES = [`${btnStyles.btn_primary}`, `${btnStyles.btn_outline}`];
+const SIZES = [`${btnStyles.btn_medium}`, `${btnStyles.btn_large}`];
 
 export const Button = ({
   children,
@@ -17,7 +17,7 @@ export const Button = ({
 
   return (
     <button
-      className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+      className={`${btnStyles.btn} ${checkButtonStyle} ${checkButtonSize}`}
       onClick={onClick}
       type={type}
     >
